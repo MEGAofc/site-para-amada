@@ -1,0 +1,213 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #9900ff;
+background: linear-gradient(90deg, rgba(153, 0, 255, 0.5) 0%, rgba(255, 0, 0, 0.5) 50%, rgba(250, 85, 225, 0.5) 100%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    cursor: url('img/heart_11186871.gif'), auto;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+  
+  h1 {
+    color: #ff4c4c;
+  }
+  
+  .mensagem {
+    max-width: 600px;
+    margin: 20px;
+    font-size: 18px;
+    color: #444;
+    min-height: 60px;
+    white-space: pre-wrap;
+  }
+  
+  .imagem-amor {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+  }
+  
+  button.botao {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards, pulse 2.5s ease-in-out infinite;
+    animation-delay: 1s, 3.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  button.botao:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .video-container {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  video {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Animações extras para corações */
+  .heart {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background: url('img/heart.png') no-repeat center;
+    background-size: contain;
+    animation: floatHeart 5s linear infinite;
+    z-index: 9999;
+    pointer-events: auto;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  .heart.explodir {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+  
+  /* Corações flutuando */
+  @keyframes floatHeart {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-800px) scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  /* Pétalas */
+  .petala {
+    position: fixed;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background: url('img/icons8-rosa-100.png') no-repeat center;
+    background-size: contain;
+    animation: cairPetala 10s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  @keyframes cairPetala {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Confetes */
+  .confete {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4c4c;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: cairConfete 7s linear infinite;
+    z-index: 2;
+    pointer-events: none;
+    filter: drop-shadow(0 0 2px #ff1a1a);
+  }
+  
+  @keyframes cairConfete {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Mensagem pop-up */
+  .mensagem-surpresa {
+    position: fixed;
+    background: #fff0f5;
+    border: 2px solid #ff4c4c;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #ff4c4c;
+    font-weight: bold;
+    animation: surgir 1.5s ease-out forwards;
+    opacity: 0;
+    z-index: 99999;
+  }
+  
+  @keyframes surgir {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-80px);
+    }
+  }
+  
+  /* Contador */
+  #contador {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #ff4c4c;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  h2{
+    color: #ff1a1a;
+  }
+  h3{
+    color: #ff1a1a;
+  }
+  
